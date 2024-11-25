@@ -3,17 +3,15 @@ from typing import List
 
 class Solution:
     def isOneBitCharacter(self, bits: List[int]) -> bool:
-        valid_chars = (0b10, 0b11, 0b0)
-        last_char = 0b0
         i = 0
         while i < len(bits):
             if i == len(bits) - 1:
-                return bits[i] == last_char
+                return bits[i] == 0b0
             elif i == len(bits) - 2:
-                return bits[i]<<1|bits[i+1] == last_char
-            elif bits[i]<<1|bits[i+1] in valid_chars:
+                return bits[i]<<1|bits[i+1] == 0b0
+            elif bits[i]<<1|bits[i+1] != 1:
                 i = i + 2
-            elif bits[i]<<1|bits[i+1]:
+            else:
                 i += 1
         return False
 
