@@ -1,5 +1,4 @@
 # https://leetcode.com/problems/valid-parentheses/description/
-from queue import Queue
 
 
 class Solution:
