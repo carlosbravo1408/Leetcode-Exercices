@@ -19,6 +19,7 @@ class Solution:
         _sqrt = self.mySqrt(num)
         return _sqrt ** 2 == num
 
+
 if __name__ == "__main__":
     assert Solution().isPerfectSquare(804609)
     assert Solution().isPerfectSquare(972196)

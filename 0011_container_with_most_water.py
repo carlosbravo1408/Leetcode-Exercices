@@ -12,7 +12,7 @@ class Solution:
         while data:
             current_height, current_index = heapq.heappop(data)
             for h, i in data:
-                area = abs(max(h, current_height) * (i-current_index))
+                area = abs(max(h, current_height) * (i - current_index))
                 if area > max_area:
                     max_area = area
         return max_area
@@ -21,7 +21,7 @@ class Solution:
         l, r = 0, len(height) - 1
         max_area = 0
         while l < r:
-            area = (r-l) * min(height[l], height[r])
+            area = (r - l) * min(height[l], height[r])
             if area > max_area:
                 max_area = area
             if height[l] < height[r]:
@@ -30,7 +30,8 @@ class Solution:
                 r -= 1
         return max_area
 
+
 if __name__ == '__main__':
-    assert Solution().maxArea([1,8,6,2,5,4,8,3,7]) == 49
-    assert Solution().maxArea([1,1]) == 1
-    assert Solution().maxArea([1,2]) == 1
+    assert Solution().maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]) == 49
+    assert Solution().maxArea([1, 1]) == 1
+    assert Solution().maxArea([1, 2]) == 1

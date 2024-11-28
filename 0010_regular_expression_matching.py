@@ -4,8 +4,9 @@ import re
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        t =  re.fullmatch(rf"\b{p}\b", s)
+        t = re.fullmatch(rf"\b{p}\b", s)
         return t is not None
+
 
 if __name__ == '__main__':
     assert not Solution().isMatch("aa", "a")

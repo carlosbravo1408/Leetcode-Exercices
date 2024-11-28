@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/3sum/
 from typing import List, Set, Dict
 
+
 class CustomSet(Set[int]):
     def __init__(self):
         super().__init__()
@@ -31,12 +32,13 @@ class CustomSet(Set[int]):
         if num in self:
             super().remove(num)
 
+
 class Solution:
 
     def threeSum1(self, nums: List[int]) -> List[List[int]]:
         nums = sorted(nums)
         result = set()
-        for left in range(len(nums)-2):
+        for left in range(len(nums) - 2):
             center = left + 1
             right = len(nums) - 1
             while center < right:
@@ -54,13 +56,13 @@ class Solution:
     def threeSum2(self, nums: List[int]) -> List[List[int]]:
         nums = sorted(nums)
         result = set()
-        for l in range(len(nums)-2):
+        for l in range(len(nums) - 2):
             prev_r = None
-            for r in range(l + 1, len(nums)-1):
+            for r in range(l + 1, len(nums) - 1):
                 if prev_r == nums[r]: continue
                 prev_r = nums[r]
                 expected = -(nums[l] + nums[r])
-                if expected in nums[r+1::]:
+                if expected in nums[r + 1::]:
                     result.add((nums[l], nums[r], expected))
         result = [list(r) for r in result]
         return result
@@ -81,10 +83,13 @@ class Solution:
             data.remove(current)
         return list(response)
 
+
 if __name__ == '__main__':
-    Solution().threeSum([0,1,1]) == []
-    Solution().threeSum([0,0, 0]) == [[0,0,0]]
-    Solution().threeSum([-1,0,1,0]) == [[-1, 0, 1]]
-    Solution().threeSum([-1,0,1,2,-1,-4]) == [[-1,-1,2], [-1,0,1]]
-    Solution().threeSum([-2,0,1,1,2]) == [[-2,0,2],[-2,1,1]]
-    sorted(Solution().threeSum([-1,0,1,2,-1,-4,-2,-3,3,0,4])) == [[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]
+    Solution().threeSum([0, 1, 1]) == []
+    Solution().threeSum([0, 0, 0]) == [[0, 0, 0]]
+    Solution().threeSum([-1, 0, 1, 0]) == [[-1, 0, 1]]
+    Solution().threeSum([-1, 0, 1, 2, -1, -4]) == [[-1, -1, 2], [-1, 0, 1]]
+    Solution().threeSum([-2, 0, 1, 1, 2]) == [[-2, 0, 2], [-2, 1, 1]]
+    sorted(Solution().threeSum([-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4])) == [
+        [-4, 0, 4], [-4, 1, 3], [-3, -1, 4], [-3, 0, 3], [-3, 1, 2],
+        [-2, -1, 3], [-2, 0, 2], [-1, -1, 2], [-1, 0, 1]]

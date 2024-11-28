@@ -5,9 +5,9 @@ class Solution:
             return len(s)
         max_len = 0
         i = 0
-        while i < len(s)-1:
+        while i < len(s) - 1:
             data = {s[i]}
-            for j in range(i+1, len(s)):
+            for j in range(i + 1, len(s)):
                 if s[j] in data:
                     break
                 data.add(s[j])
@@ -16,7 +16,7 @@ class Solution:
         return max_len
 
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if len(s)<=1:
+        if len(s) <= 1:
             return len(s)
         l = 0
         max_len = 0
@@ -28,8 +28,6 @@ class Solution:
                 l += 1
             max_len = max(max_len, r - l + 1)
         return max_len
-
-
 
 
 if __name__ == '__main__':

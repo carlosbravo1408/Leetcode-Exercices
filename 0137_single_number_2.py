@@ -32,6 +32,7 @@ class CustomSet(Set[int]):
         if num in self:
             super().remove(num)
 
+
 class Solution:
     def singleNumber1(self, nums: List[int]) -> int:
         data = CustomSet()

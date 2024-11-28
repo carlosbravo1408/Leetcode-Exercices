@@ -38,13 +38,15 @@ class Solution:
         v = []
         for l in lists:
             if l is not None:
-                v+=self._node_to_list(l)
+                v += self._node_to_list(l)
         if len(v) == 0:
             return None
         return self._list_to_node(sorted(v))
+
 
 if __name__ == '__main__':
     s = Solution()
     s.mergeKLists([None, None, None])
     s.mergeKLists([None, None, None, s._list_to_node([1, 2, 4])])
-    s.mergeKLists([None, None, None, s._list_to_node([1, 2, 4]), None, s._list_to_node([1, 3, 4])])
+    s.mergeKLists([None, None, None, s._list_to_node([1, 2, 4]), None,
+                   s._list_to_node([1, 3, 4])])

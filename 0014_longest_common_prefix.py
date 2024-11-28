@@ -22,6 +22,7 @@ class Solution:
             output += _char
             i += 1
 
+
 if __name__ == '__main__':
     assert Solution().longestCommonPrefix(["flower", "flow", "flight"]) == "fl"
     assert Solution().longestCommonPrefix(["dog", "racecar", "car"]) == ""

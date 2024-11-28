@@ -8,7 +8,7 @@ class Solution:
         output = ''
         for i in range(numRows):
             for j in range(c + 1):
-                l, r = j*n-i, j*n+i
+                l, r = j * n - i, j * n + i
                 if i == numRows - 1 or i == 0:
                     l = -1
                 if l >= 0 and l < len(s):
@@ -16,8 +16,6 @@ class Solution:
                 if r >= 0 and r < len(s):
                     output += s[r]
         return output
-
-
 
 
 if __name__ == '__main__':

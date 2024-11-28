@@ -3,7 +3,7 @@ from typing import List, Set, Dict, Iterable
 
 
 class CustomSet(Set[int]):
-    def __init__(self, seq:Iterable[int] = ()):
+    def __init__(self, seq: Iterable[int] = ()):
         super().__init__()
         self.__data: Dict[int, int] = {}
         if seq is not None:
@@ -35,6 +35,7 @@ class CustomSet(Set[int]):
         if num in self:
             super().remove(num)
 
+
 class Solution:
     def threeSumClosest1(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
@@ -65,12 +66,12 @@ class Solution:
                     right -= 1
         return val
 
-    #recursive approach
+    # recursive approach
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
         return self.kSumClosest(nums, 3, target)
 
-    def kSumClosest(self, nums: List[int], k:int, target: int) -> int:
+    def kSumClosest(self, nums: List[int], k: int, target: int) -> int:
         N = len(nums)
         if N == k:
             return sum(nums[:k])
@@ -81,12 +82,13 @@ class Solution:
         if current <= target:
             return current
         if k == 1:
-            return min([(x, abs(target - x)) for x in nums], key=lambda x: x[1])[0]
+            return \
+            min([(x, abs(target - x)) for x in nums], key=lambda x: x[1])[0]
         closest = sum(nums[:k])
-        for i, x in enumerate(nums[:-k+1]):
-            if i>0 and x == nums[i-1]:
+        for i, x in enumerate(nums[:-k + 1]):
+            if i > 0 and x == nums[i - 1]:
                 continue
-            current = self.kSumClosest(nums[i+1:], k-1, target - x) + x
+            current = self.kSumClosest(nums[i + 1:], k - 1, target - x) + x
             if abs(target - current) < abs(target - closest):
                 if current == target:
                     return target
@@ -94,11 +96,12 @@ class Solution:
                     closest = current
         return closest
 
+
 if __name__ == '__main__':
-    assert Solution().threeSumClosest([-1, 2,1,-4], 1) == 2
+    assert Solution().threeSumClosest([-1, 2, 1, -4], 1) == 2
     assert Solution().threeSumClosest([-1, 0, 1, 2, -1, -4], 1) == 1
-    assert Solution().threeSumClosest([0,0,0], 1) == 0
-    assert Solution().threeSumClosest([-4,2,2,3,3,3], 0) == 0
-    assert Solution().threeSumClosest([4,0,5,-5,3,3,0,-4,-5], -2) == -2
-    assert Solution().threeSumClosest([0,0,0], 10000) == 0
-    assert Solution().threeSumClosest([-1000,-1000,-1000], -3000) == -3000
+    assert Solution().threeSumClosest([0, 0, 0], 1) == 0
+    assert Solution().threeSumClosest([-4, 2, 2, 3, 3, 3], 0) == 0
+    assert Solution().threeSumClosest([4, 0, 5, -5, 3, 3, 0, -4, -5], -2) == -2
+    assert Solution().threeSumClosest([0, 0, 0], 10000) == 0
+    assert Solution().threeSumClosest([-1000, -1000, -1000], -3000) == -3000

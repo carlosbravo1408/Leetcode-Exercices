@@ -51,19 +51,20 @@ class Solution:
             right += k
         return self._list_to_node(_list)
 
+
 if __name__ == '__main__':
     s = Solution()
-    n = s._list_to_node([1,2])
+    n = s._list_to_node([1, 2])
     s.reverseKGroup(n, 1)
-    n = s._list_to_node([1,2,3])
+    n = s._list_to_node([1, 2, 3])
     s.reverseKGroup(n, 2)
-    n = s._list_to_node([1,2,3,4])
+    n = s._list_to_node([1, 2, 3, 4])
     s.reverseKGroup(n, 3)
-    n = s._list_to_node([1,2,3,4,5])
+    n = s._list_to_node([1, 2, 3, 4, 5])
     s.reverseKGroup(n, 2)
-    n = s._list_to_node([1,2,3,4,5,6])
+    n = s._list_to_node([1, 2, 3, 4, 5, 6])
     s.reverseKGroup(n, 3)
-    n = s._list_to_node([1,2,3,4,5,6,7])
+    n = s._list_to_node([1, 2, 3, 4, 5, 6, 7])
     s.reverseKGroup(n, 4)
-    n = s._list_to_node([1,2,3,4,5])
+    n = s._list_to_node([1, 2, 3, 4, 5])
     s.reverseKGroup(n, 3)

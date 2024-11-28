@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/sqrtx/
 import struct
 
+
 class Solution:
 
     # requiere al menos 3 iteraciones para cumplir todos los casos, o 5 para
@@ -39,7 +40,6 @@ class Solution:
         for _ in range(iterations):
             y = y * (threehalfs - (x2 * y * y))
         return y
-
 
     def optimizedInverseSqrt(self, x: float, iterations: int = 1) -> float:
         # https://youtu.be/tmb6bLbxd08?si=c_qB8z3h-nOFs099

@@ -9,7 +9,8 @@ class ListNode:
 
 
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[
+        ListNode]:
         depth = 1
         current = head
         while current.next is not None:
@@ -37,9 +38,13 @@ def convert_list_to_node_list(data: List[int]) -> Optional[ListNode]:
         current_node = current_node.next
     return first_node
 
+
 if __name__ == '__main__':
     s = Solution()
-    s.removeNthFromEnd(head = convert_list_to_node_list([1,2,3,4,5]), n = 2) #expected [1,2,3,5]
-    s.removeNthFromEnd(head = convert_list_to_node_list([1]), n = 1) #expected []
-    s.removeNthFromEnd(head = convert_list_to_node_list([1,2]), n = 1) #expected [1]
-    s.removeNthFromEnd(head = convert_list_to_node_list([1,2]), n = 2) #expected [2]
+    s.removeNthFromEnd(head=convert_list_to_node_list([1, 2, 3, 4, 5]),
+                       n=2)  # expected [1,2,3,5]
+    s.removeNthFromEnd(head=convert_list_to_node_list([1]), n=1)  # expected []
+    s.removeNthFromEnd(head=convert_list_to_node_list([1, 2]),
+                       n=1)  # expected [1]
+    s.removeNthFromEnd(head=convert_list_to_node_list([1, 2]),
+                       n=2)  # expected [2]

@@ -8,6 +8,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None:
@@ -26,7 +27,7 @@ class Solution:
             b.next = a
             a.next = c
             return b
-        current = ListNode(0,head)
+        current = ListNode(0, head)
         new_head = current
         while current is not None:
             if current.next is None:
@@ -53,18 +54,18 @@ class Solution:
             current = current.next
         return start
 
+
 if __name__ == '__main__':
     s = Solution()
-    n = s._list_to_node([1,2])
+    n = s._list_to_node([1, 2])
     s.swapPairs(n)
-    n = s._list_to_node([1,2,3])
+    n = s._list_to_node([1, 2, 3])
     s.swapPairs(n)
-    n = s._list_to_node([1,2,3,4])
+    n = s._list_to_node([1, 2, 3, 4])
     s.swapPairs(n)
-    n = s._list_to_node([1,2,3,4,5])
+    n = s._list_to_node([1, 2, 3, 4, 5])
     s.swapPairs(n)
-    n = s._list_to_node([1,2,3,4,5,6])
+    n = s._list_to_node([1, 2, 3, 4, 5, 6])
     s.swapPairs(n)
-    n = s._list_to_node([1,2,3,4,5,6,7])
+    n = s._list_to_node([1, 2, 3, 4, 5, 6, 7])
     s.swapPairs(n)
-

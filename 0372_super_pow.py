@@ -7,7 +7,7 @@ class Solution:
     def divide_by_2(self, b: List[int]) -> List[int]:
         r = 0
         for i in range(len(b)):
-            d = (r*10+b[i])
+            d = (r * 10 + b[i])
             if d <= 0:
                 continue
             c = d // 2
@@ -53,8 +53,9 @@ class Solution:
             exp = phi_m
         return self.bin_exp(a, exp, m)
 
+
 if __name__ == '__main__':
     print(Solution().superPow(2, [3]))
     print(Solution().superPow(2, [1, 0]))
     print(Solution().superPow(1, [1, 2, 5]))
-    print(Solution().superPow(1, [4,3,3,8,5,2]))
+    print(Solution().superPow(1, [4, 3, 3, 8, 5, 2]))

@@ -12,7 +12,8 @@ class Solution:
                 data.remove(num)
         return list(data)
 
+
 if __name__ == '__main__':
-    assert Solution().singleNumber([1,2,1,3,2,5]) == [3,5]
+    assert Solution().singleNumber([1, 2, 1, 3, 2, 5]) == [3, 5]
     assert Solution().singleNumber([-1, 0]) == [-1, 0]
     assert Solution().singleNumber([0, 1]) == [0, 1]

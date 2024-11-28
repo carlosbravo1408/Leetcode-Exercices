@@ -16,6 +16,7 @@ class Solution:
             return False
         return x == self.reverse(x)
 
+
 if __name__ == '__main__':
     assert Solution().isPalindrome(121)
     assert not Solution().isPalindrome(-121)

@@ -18,6 +18,7 @@ class Solution:
         return y
 
     MEM = {}
+
     # with memoization
     def fib(self, n: int) -> int:
         if n in self.MEM:

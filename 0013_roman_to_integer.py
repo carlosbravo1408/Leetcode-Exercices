@@ -9,10 +9,11 @@ class Solution:
         total = 0
         for c in s:
             if self.VALUES[prev_c] < self.VALUES[c]:
-                total -= 2*self.VALUES[prev_c]
+                total -= 2 * self.VALUES[prev_c]
             total += self.VALUES[c]
             prev_c = c
         return total
+
 
 if __name__ == '__main__':
     assert Solution().romanToInt('III') == 3

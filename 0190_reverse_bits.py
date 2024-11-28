@@ -9,6 +9,9 @@ class Solution:
         n = (((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1)) & 0xFFFFFFFF
         return n
 
+
 if __name__ == '__main__':
-    assert Solution().reverseBits(0b00000010100101000001111010011100) == 964176192
-    assert Solution().reverseBits(0b11111111111111111111111111111101) == 3221225471
+    assert Solution().reverseBits(
+        0b00000010100101000001111010011100) == 964176192
+    assert Solution().reverseBits(
+        0b11111111111111111111111111111101) == 3221225471

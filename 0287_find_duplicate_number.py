@@ -10,5 +10,6 @@ class Solution:
                 return num
             data.add(num)
 
+
 if __name__ == "__main__":
-    assert Solution().findDuplicate([1,3,4,2,2]) == 2
+    assert Solution().findDuplicate([1, 3, 4, 2, 2]) == 2

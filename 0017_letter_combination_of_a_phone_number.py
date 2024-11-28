@@ -14,13 +14,17 @@ class Solution:
         "8": "tuv",
         "9": "wxyz"
     }
+
     def letterCombinations(self, digits: str) -> List[str]:
         if len(digits) == 0:
             return []
         result = itertools.product(*[self.KEYBOARD[digit] for digit in digits])
         return [''.join(s) for s in result]
 
+
 if __name__ == "__main__":
-    assert Solution().letterCombinations("23") == ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+    assert Solution().letterCombinations("23") == ["ad", "ae", "af", "bd",
+                                                   "be", "bf", "cd", "ce",
+                                                   "cf"]
     assert Solution().letterCombinations("") == []
-    assert Solution().letterCombinations("2") == ["a","b","c"]
+    assert Solution().letterCombinations("2") == ["a", "b", "c"]

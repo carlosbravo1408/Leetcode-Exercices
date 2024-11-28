@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/remove-element/
-from queue import Queue, SimpleQueue
+from queue import SimpleQueue
 from typing import List
 
 
@@ -13,14 +13,14 @@ class Solution:
         while not q.empty():
             current = q.get()
             if current == val:
-                output-=1
+                output -= 1
             else:
-                nums[i]=current
-                i+=1
+                nums[i] = current
+                i += 1
         return output
+
 
 if __name__ == '__main__':
     s = Solution()
-    assert s.removeElement([3,2,2,3], 3) == 2
-    assert s.removeElement([0,1,2,2,3,0,4,2], 2) == 5
-
+    assert s.removeElement([3, 2, 2, 3], 3) == 2
+    assert s.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) == 5

@@ -12,7 +12,8 @@ class Solution:
                 data.remove(i)
         return data.pop()
 
+
 if __name__ == '__main__':
-    assert Solution().singleNumber([2,2,1]) == 1
-    assert Solution().singleNumber([4,1,2,1,2]) == 4
+    assert Solution().singleNumber([2, 2, 1]) == 1
+    assert Solution().singleNumber([4, 1, 2, 1, 2]) == 4
     assert Solution().singleNumber([1]) == 1

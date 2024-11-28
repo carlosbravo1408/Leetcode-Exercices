@@ -3,6 +3,7 @@
 
 class Solution:
     OPEN = ["(", "[", "{"]
+
     def isValid(self, s: str) -> bool:
         data = list()
         for symbol in s:

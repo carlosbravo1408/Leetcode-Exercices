@@ -86,15 +86,20 @@ class Solution:
 
 
 if __name__ == '__main__':
-    assert 6 == Solution().trapping_rain_water([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])
-    assert 13 == Solution().trapping_rain_water([0, 3, 0, 3, 1, 0, 2, 2, 3, 2, 3, 1, 3])
-    assert 30 == Solution().trapping_rain_water([4, 2, 0, 3, 1, 2, 0, 2, 3, 0, 1, 0, 4])
-    assert 19 == Solution().trapping_rain_water([4, 2, 0, 3, 1, 2, 0, 2, 3, 0, 1, 0, 3])
+    assert 6 == Solution().trapping_rain_water(
+        [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])
+    assert 13 == Solution().trapping_rain_water(
+        [0, 3, 0, 3, 1, 0, 2, 2, 3, 2, 3, 1, 3])
+    assert 30 == Solution().trapping_rain_water(
+        [4, 2, 0, 3, 1, 2, 0, 2, 3, 0, 1, 0, 4])
+    assert 19 == Solution().trapping_rain_water(
+        [4, 2, 0, 3, 1, 2, 0, 2, 3, 0, 1, 0, 3])
     assert 1 == Solution().trapping_rain_water([5, 4, 1, 2])
     assert 9 == Solution().trapping_rain_water([4, 2, 0, 3, 2, 5])
     assert 23 == Solution().trapping_rain_water([5, 5, 1, 7, 1, 1, 5, 2, 7, 6])
     assert 21 == Solution().trapping_rain_water([6, 4, 1, 7, 0, 7, 1, 4, 6])
     assert 14 == Solution().trapping_rain_water([0, 6, 4, 1, 7, 1, 4, 6])
     assert 7 == Solution().trapping_rain_water([0, 7, 1, 4, 6])
-    assert 40 == Solution().trapping_rain_water([8, 2, 4, 7, 4, 8, 7, 8, 0, 8, 1, 4, 0, 7])
+    assert 40 == Solution().trapping_rain_water(
+        [8, 2, 4, 7, 4, 8, 7, 8, 0, 8, 1, 4, 0, 7])
     assert 14 == Solution().trapping_rain_water([6, 4, 1, 7, 7, 7, 1, 4, 6])

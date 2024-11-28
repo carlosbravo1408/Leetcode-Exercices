@@ -12,8 +12,9 @@ class Solution:
         return n
 
     def grayCode(self, n: int) -> List[int]:
-        return [_n ^ _n >> 1 for _n in range(1<<n)]
+        return [_n ^ _n >> 1 for _n in range(1 << n)]
+
 
 if __name__ == '__main__':
     assert Solution().grayCode(2) == [0, 1, 3, 2]
-    assert Solution().grayCode(3) == [0,1,3,2,6,7,5,4]
+    assert Solution().grayCode(3) == [0, 1, 3, 2, 6, 7, 5, 4]

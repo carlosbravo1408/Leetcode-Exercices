@@ -34,7 +34,7 @@ class Solution:
         ListNode]) -> Optional[ListNode]:
         return self._list_to_node(
             sorted(
-                self._node_to_list(list1)+self._node_to_list(list2)
+                self._node_to_list(list1) + self._node_to_list(list2)
             )
         )
 
