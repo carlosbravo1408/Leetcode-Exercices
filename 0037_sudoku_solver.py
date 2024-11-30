@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/sudoku-solver/
 # https://www.geeksforgeeks.org/sudoku-backtracking-7/
+# https://medium.com/my-udacity-ai-nanodegree-notes/solving-sudoku-think-constraint-satisfaction-problem-75763f0742c9
 import copy
 import time
 from typing import List
@@ -188,5 +189,18 @@ if __name__ == '__main__':
         [".",".",".","8",".","3",".","2","."],
         [".",".",".",".",".",".",".",".","6"],
         [".",".",".","2","7","5","9",".","."]
+    ]
+    s.solveSudoku(board)
+    # hardest sudoku in the world
+    board = [
+        ['8', '.', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '3', '6', '.', '.', '.', '.', '.'],
+        ['.', '7', '.', '.', '9', '.', '2', '.', '.'],
+        ['.', '5', '.', '.', '.', '7', '.', '.', '.'],
+        ['.', '.', '.', '.', '4', '5', '7', '.', '.'],
+        ['.', '.', '.', '1', '.', '.', '.', '3', '.'],
+        ['.', '.', '1', '.', '.', '.', '.', '6', '8'],
+        ['.', '.', '8', '5', '.', '.', '.', '1', '.'],
+        ['.', '9', '.', '.', '.', '.', '4', '.', '.'],
     ]
     s.solveSudoku(board)
